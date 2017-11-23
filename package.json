@@ -1,0 +1,9 @@
+{
+  "name": "redux-server-middleware",
+  "version": "1.0.0",
+  "description": "Redux middleware for fetching server api",
+  "main": "index.js",
+  "author": "1ven <1ven.mironchik@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
