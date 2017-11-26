@@ -2,7 +2,7 @@ import { pick, isEmpty } from "ramda";
 import { fetchApi } from "./utils";
 import { symbol } from "./createApi";
 
-export default config => store => next => action => {
+export default store => next => action => {
   if (!action[symbol]) {
     return next(action);
   }
@@ -18,7 +18,6 @@ export default config => store => next => action => {
   fetchApi(
     requestData,
     action.map,
-    config,
     store.getState(),
     (body, meta) => {
       next({

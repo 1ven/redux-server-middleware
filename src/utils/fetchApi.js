@@ -4,12 +4,11 @@ import { replaceParams } from "./";
 export default (
   { url, headers, method, query, body, params } = {},
   { request: mapRequest = identity, response: mapResponse = identity } = {},
-  config,
   state,
   onSuccess,
   onError
 ) => {
-  fetch(config.host + replaceParams(withState(url, state), params), {
+  fetch(replaceParams(withState(url, state), params), {
     headers: withState(headers, state),
     body: mapRequest(body),
     method
