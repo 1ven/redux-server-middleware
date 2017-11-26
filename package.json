@@ -1,6 +1,6 @@
 {
   "name": "redux-server-middleware",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redux middleware for fetching server api",
   "main": "lib/index.js",
   "author": "1ven <1ven.mironchik@gmail.com>",
@@ -10,12 +10,13 @@
     "lib"
   ],
   "scripts": {
-    "prepublish": "rimraf ./lib && babel ./src --outDir ./lib"
+    "prepublish": "rimraf ./lib && babel ./src --out-dir ./lib"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.32",
     "@babel/core": "^7.0.0-beta.32",
     "@babel/preset-env": "^7.0.0-beta.32",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
