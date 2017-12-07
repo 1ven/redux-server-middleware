@@ -1,6 +1,6 @@
 {
   "name": "redux-server-middleware",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Redux middleware for fetching server api",
   "main": "lib/index.js",
   "author": "1ven <1ven.mironchik@gmail.com>",
