@@ -8,7 +8,7 @@ export default store => next => action => {
   }
 
   const { requestData, types } = action;
-  const requestPayload = getRequestPayload(requestData);
+  const { payload: requestPayload } = requestData;
 
   next({
     type: types.request,
@@ -41,9 +41,4 @@ export default store => next => action => {
       });
     }
   );
-};
-
-const getRequestPayload = requestData => {
-  const result = pick(["params", "body"], requestData);
-  return !isEmpty(result) ? result : void 0;
 };

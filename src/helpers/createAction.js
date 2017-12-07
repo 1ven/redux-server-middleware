@@ -6,7 +6,7 @@ export default (spec, types) => request => ({
   types,
   requestData: {
     ...pick(["url", "method", "headers", "query"], spec),
-    ...pick(["body", "params"], request || {})
+    payload: pick(["body", "params", "custom"], request || {})
   },
   map: spec.map
 });

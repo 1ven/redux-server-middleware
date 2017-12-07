@@ -2,7 +2,7 @@ import { identity } from "ramda";
 import { replaceParams } from "./";
 
 export default (
-  { url, headers, method, query, body, params } = {},
+  { url, headers, method, query, payload: { body, params } = {} } = {},
   { request: mapRequest = identity, response: mapResponse = identity } = {},
   state,
   onSuccess,
