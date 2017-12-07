@@ -9,6 +9,9 @@
   "files": [
     "lib"
   ],
+  "scripts": {
+    "build": "babel ./src --out-dir ./lib"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.32",
     "@babel/core": "^7.0.0-beta.32",
