@@ -15,7 +15,7 @@ export default types => (
         ...state,
         isFetching: false,
         data: action.payload.body,
-        lastUpdated: action.meta.receivedAt,
+        lastUpdated: action.payload.meta.receivedAt,
         error: void 0
       };
     case types.failure:
